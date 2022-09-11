@@ -1,0 +1,4 @@
+
+server.port=9094
+spring.application.name=OrdersService
+spring.data.mongodb.uri=mongodb+srv://mongodb:9618821719@cluster0.8cuh87d.mongodb.net/NewOrders?retryWrites=true&w=majority

@@ -1,0 +1,53 @@
+package com.capg.entity;
+
+import javax.persistence.CascadeType;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.Table;
+
+
+
+import com.capg.dto.OrderDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+@Entity
+@Table(name="orders_tbl")
+public class Order {
+	
+	@Id
+//	@GeneratedValue(strategy = GenerationType.AUTO)
+	@Column(name="order_id")
+	private Integer orderId;
+	
+	@Column(name="order_name")
+	private String orderName;
+	
+	@Column(name="order_quantity")
+	private Integer quantity;
+	
+	@Column(name="order_price")
+	private Long price;
+	
+//	@ManyToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name = "eo_fk")
+//	private Customer customer;
+	
+	public Order(OrderDTO orderDTO) {
+		this.orderId=orderDTO.getOrderId();
+		this.orderName=orderDTO.getOrderName();
+		this.quantity=orderDTO.getQuantity();
+		this.price=orderDTO.getPrice();
+	}
+	
+}
+

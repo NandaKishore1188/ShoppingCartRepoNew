@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Delete resource &apos;spring-boot-security-jwt-auth-mongodb-master.zip_expanded&apos;" deleteContents="false" description="Delete resource &apos;spring-boot-security-jwt-auth-mongodb-master.zip_expanded&apos;" element1="/spring-boot-security-jwt-auth-mongodb-master.zip_expanded" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1662012107289"/>
+</session>

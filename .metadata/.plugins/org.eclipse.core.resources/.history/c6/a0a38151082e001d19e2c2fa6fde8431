@@ -1,0 +1,8 @@
+
+server.port=9093
+spring.application.name=OrdersService
+spring.data.mongodb.uri=mongodb+srv://mongodb:9618821719@cluster0.8cuh87d.mongodb.net/NewOrders?retryWrites=true&w=majority
+
+#eureka.client.register-with-eureka=false
+#
+#eureka.client.fetch-registry=false

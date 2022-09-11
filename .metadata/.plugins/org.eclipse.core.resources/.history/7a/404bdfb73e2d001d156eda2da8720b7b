@@ -1,0 +1,49 @@
+package com.capg.entity;
+
+
+
+
+
+import org.springframework.data.annotation.Id;
+import org.springframework.data.annotation.Transient;
+
+import com.capg.dto.OrderDTO;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+
+public class Order {
+	
+	@Transient
+	public static String SEQUENCE_NAME;
+
+	@Id
+	private Integer orderId;
+	
+
+	private String orderName;
+	
+
+	private Integer quantity;
+	
+
+	private Long price;
+	
+//	@ManyToOne(cascade=CascadeType.ALL)
+//	@JoinColumn(name = "eo_fk")
+//	private Customer customer;
+	
+	public Order(OrderDTO orderDTO) {
+		this.orderId=orderDTO.getOrderId();
+		this.orderName=orderDTO.getOrderName();
+		this.quantity=orderDTO.getQuantity();
+		this.price=orderDTO.getPrice();
+	}
+	
+}
+
